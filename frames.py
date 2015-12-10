@@ -100,7 +100,7 @@ def get_transitions(path, W=32, H=32,
             transition_frame = True
 
         if image_output_dir is not None:
-            dir_fmt = ('%s/%08d_' % (image_output_dir, frame_num))+'%.jpg'
+            dir_fmt = ('%s/%08d_' % (image_output_dir, frame_num))+'%s.jpg'
             Image.fromarray(this_frame).convert('RGB').save(dir_fmt % 'orig')
             Image.fromarray(background_pixels).convert('RGB').save(dir_fmt % 'bg')
             Image.fromarray(change_this_frame).convert('RGB').save(dir_fmt % 'change')
